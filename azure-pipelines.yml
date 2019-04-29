@@ -25,5 +25,8 @@ steps:
     command: test
     projects: '**/*Tests/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
+# ...
+# do this near the end of your pipeline in most cases
+- task: PublishBuildArtifacts@1
 # - script: dotnet build --configuration $(buildConfiguration)
 #  displayName: 'dotnet build $(buildConfiguration)'
