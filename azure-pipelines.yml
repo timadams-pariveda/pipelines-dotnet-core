@@ -30,7 +30,7 @@ steps:
 - task: PublishBuildArtifacts@1
 - task: AzureRmWebAppDeployment@3
   inputs:
-    azureSubscription: '4f14a11a-6222-413e-9d64-8073d3e351a2'
+    azureSubscription: 'Free Trial (4f14a11a-6222-413e-9d64-8073d3e351a2)'
     WebAppName: 'devopstest1234'
     Package: $(System.ArtifactsDirectory)/**/*.zip
 # - script: dotnet build --configuration $(buildConfiguration)
