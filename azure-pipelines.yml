@@ -28,5 +28,10 @@ steps:
 # ...
 # do this near the end of your pipeline in most cases
 - task: PublishBuildArtifacts@1
+- task: AzureRmWebAppDeployment@3
+  inputs:
+    azureSubscription: 'Free Trial'
+    WebAppName: 'devopstest1234'
+    Package: $(System.ArtifactsDirectory)/**/*.zip
 # - script: dotnet build --configuration $(buildConfiguration)
 #  displayName: 'dotnet build $(buildConfiguration)'
