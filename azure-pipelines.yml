@@ -21,11 +21,9 @@ steps:
     projects: '**/*.csproj'
     arguments: '--configuration Release' # Update this to match your need
 - task: DotNetCoreCLI@2
-  displayName: 'Install dotnetsay'
   inputs:
-    command: custom
-    projects: '**/*.csproj'
-    custom: tool
-    arguments: 'install -g dotnetsay'
+    command: test
+    projects: '**/*Tests/*.csproj'
+    arguments: '--configuration $(buildConfiguration)'
 # - script: dotnet build --configuration $(buildConfiguration)
 #  displayName: 'dotnet build $(buildConfiguration)'
